@@ -56,5 +56,10 @@ public class UserController {
         return UserDto.fromUser(user);
     }
 
+    @GetMapping("/{id}")
+    public String getUserDetails(@PathVariable long id) {
+        System.out.println("Received request to retrieve user details");
+        return "Hello from UserService! with id : "+id;
+    }
 
 }
